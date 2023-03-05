@@ -3,4 +3,12 @@ import App from './App.vue'
 
 import './assets/main.css'
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+app.config.errorHandler = (err) => {
+    console.log("Error: ", err);
+}
+
+app.mount('#app')
+
+
