@@ -13,7 +13,7 @@ defineProps<Props>()
 <template>
     <header class="wrapper">
         <img alt="Stacking Ring logo" src="../assets/stacking-ring.png" />
-        <h2>{{ msg }}</h2>
+        <h2 class="text-3xl font-bold underline">{{ msg }}</h2>
         <IconPresentation />
         <IconMiningCart />
         <IconPurse />
