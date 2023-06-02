@@ -1,19 +1,21 @@
-<script setup lang="ts">
-import NavBar from './components/NavBar.vue';
-</script>
-
 <template>
-  <header>
-    <NavBar msg="Stacking NFT" />
-  </header>
-
-  <main>
-    <h4>Hello there</h4>
-  </main>
+  <div class="min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-grow container mx-auto px-4 py-6">
+      <router-view />
+    </main>
+    <Footer />
+  </div>
 </template>
 
-<style scoped>
-  header .wrapper {
-    display: flex;
+<script>
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+
+export default {
+  components: {
+    Header,
+    Footer
   }
-</style>
+}
+</script>
